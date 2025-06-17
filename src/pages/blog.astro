@@ -1,0 +1,35 @@
+---
+const priceOld = '3500';
+const priceNew = '850';
+const currency = 'COP';
+const product = 'Glucozen';
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="nav">
+			<ul class="navigation">
+				<li class="navigation__item"><a href="/">Main</a></li>
+				<li class="navigation__item"><a href="/about">About</a></li>
+				<li class="navigation__item"><a href="/blog">Price</a></li>
+			</ul> 
+		</nav>
+        <h1>Price</h1>
+        <form action="../send/" method="post">
+            <h2>PAY</h2>
+            <div>
+                <p>{priceOld} <span>{currency}</span></p>
+                <p>{priceNew} <span>{currency}</span></p>
+            </div>
+            <div>
+                <p class="product">{product}</p>
+            </div>
+        </form>
+    </body>
+</html> 
