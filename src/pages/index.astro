@@ -1,5 +1,9 @@
 ---
+import '../styles/global.css'
 
+const weight = 900;
+const size = '48px';
+const greenBg = "green";
 ---
 
 <html lang="en">
@@ -9,6 +13,17 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+		<style define:vars= {{greenBg}}>
+			.main_header {
+				color: blue;
+				font-weight: var(--weight);
+				font-size: var(--size);
+			}
+
+			.green_bg {
+				color: var(--greenBg);
+			}
+		</style>
 	</head>
 	<body>
 		<nav class="nav">
@@ -18,7 +33,7 @@
 				<li class="navigation__item"><a href="/blog">Price</a></li>
 			</ul> 
 		</nav>
-		<h1>Test main_header</h1>
+		<h1 class="main_header">Test main_header <span class="green_bg">test green_bg</span> test test tes</h1>
 		<div>
 			<p>video-container</p>
 		</div>
